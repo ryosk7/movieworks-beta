@@ -1,0 +1,157 @@
+/* ーーーーーーーーーーfooter－－－－－－－－－－－－ */
+#footer {
+  width: 100%;
+  min-width: 960px;
+  padding-bottom: 22spx;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-position-y: top; */
+  height: 323  px;
+  /* position: absolute; */
+  /* bottom: 0; */
+}
+
+.blue_bg {
+  background: #2793e6c4 url(https://ringo-applepie.com/wp-content/themes/ringo/assets/img/background_red.png) repeat repeat bottom center;
+  background-size: 784px 1108px;
+  width: 100%;
+  font-weight: 700;
+}
+
+.footer-content {
+  position: relative;
+}
+
+.footer-pdd{
+  padding-top: 58px;
+}
+
+/* .inner {
+  padding: 0 210px;
+} */
+
+.cf {
+  zoom: 1;
+}
+
+#footer .left {
+  float: left;
+  margin: -129px 1px 7px 192px;
+}
+
+#footer .logo {
+  width: 118px;
+  background-size: 118px 25px;
+}
+
+#footer .logo {
+  width: 100px;
+  height: 25px;
+  margin-bottom: 5px;
+  /* background-image: url('src/img/MW_Logo.png'); */
+  background-size: 100px 25px;
+}
+.logo img {
+  width: 200px;
+  height: 30px;
+  margin-bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-weight: 600;
+  outline: none;
+}
+
+
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+
+/* p {
+  font-size: 14px;
+  color: #575757;
+  text-align: justify;
+  font-feature-settings: 'palt';
+} */
+
+#footer p {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 3px;
+}
+
+#footer .right {
+  float: right;
+  margin-top: -135px;
+margin-right: 265px;
+}
+
+#footer .right ul li {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding: 10px 0;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+#footer .right ul li .sbtn_in {
+    width: 35px;
+    height: 35px;
+    /* border-radius: 50%;
+    border: 1px solid #fff; */
+    /* background-color: #fff; */
+    text-align: center;
+    /* line-height: 35px; */
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+#footer .right ul li .sbtn_in p {
+  font-size: 13px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.icon-facebook:before {
+  content: '\e801';
+}
+
+#footer .right ul li .sbtn_in .slide {
+  background: #fff;
+  color: #e4002b;
+  font-size: 13px;
+}
+
+[class^=icon-]:before, [class*=" icon-"]:before {
+  font-family: fontello;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+<<<<<<< HEAD
+.sbtn_in img {
+  z-index: 99;
+=======
+
+.icon-facebook:before {
+    content: '\e801';
+>>>>>>> edit-profile-page
+}
+.right a:hover {
+  opacity: .5;
+}

@@ -102,7 +102,10 @@
              <li><a href="#top"  onclick="nav_close()">home</a></li>
              <li><a href="#section-target"  onclick="nav_close()">profile</a></li>
              <li><a href="#workSection"  onclick="nav_close()">gallery</a></li>
+             <li><a href=""  onclick="nav_close()">list</a></li>
              <li><a href=""  onclick="nav_close()">push</a></li>
+
+
            </ul>
 
          </div>
@@ -110,14 +113,16 @@
            <div class="nav_cont">
 
                <div class="home_btn">
-                 <a href="index.html"><img src="src/img/MW_Logo.png" alt="" class="movieworks_logo"></a>
+                 <a href="http://localhost/movieworks-beta/MW_TopPage/MW_TopPage/index.php"><img src="src/img/MW_Logo.png" alt="" class="movieworks_logo"></a>
                </div>
 
              <ul>
-               <li><a href="#"><img src="src/img/home.png" alt="" class="header_icon"><p>home</p></a></li>
-               <li><a href="#"><img src="src/img/prof.png" alt="" class="header_icon"><p>profile</p></a></li>
-               <li><a href="#"><img src="src/img/serch.png" alt="" class="header_icon"><p>gallery</p></a></li>
-               <li><a href="#"><img src="src/img/note.png" alt="" class="header_icon"><p>push</p></a></li>
+               <li><a href=""><img src="src/img/home.png" alt="" class="header_icon"><p>home</p></a></li>
+               <li><a href="http://localhost/movieworks-beta/profile.php?mode=success&code=4/AAAJutV5MmO-buUKa-tLYzMI2E35K8cPCFDF2hO6D2PaHgP0fZXTXpEbkUdZvHCFua4KsOmKxEWPk-5l0mYDJd0#"><img src="src/img/prof.png" alt="" class="header_icon"><p>profile</p></a></li>
+               <li><a href="http://localhost/movieworks-beta/gallaryform.php"><img src="src/img/serch.png" alt="" class="header_icon"><p>gallery</p></a></li>
+               <li><a href="http://localhost/movieworks-beta/list.php"><img src="src/img/human.png" alt="" class="header_icon"><p>list</p></a></li>
+               <li><a href="http://localhost/movieworks-beta/touko.php"><img src="src/img/note.png" alt="" class="header_icon"><p>push</p></a></li>
+
              </ul>
              <a id="menu_btn" href="javascript:void(0)" onclick="nav_open()" class="nav_menu_btn">&Congruent;
              </a>
@@ -132,7 +137,7 @@
 
              <?php
              require_once 'vendor/autoload.php';
-             $self = "http://{$_SERVER['HTTP_HOST']}/beta-movieworks/profile.php";
+             $self = "http://{$_SERVER['HTTP_HOST']}/movieworks-beta/profile.php";
              $success = "$self?mode=success";
              $secretsJson = 'client_secret.json';
              $p = $_GET;
@@ -215,9 +220,14 @@
 
                 <div class="prof-text">
 
-                  <div class="movie_up_btn">
-                    <input type="button" id="movie_button" value="  MOVIE UPLOAD  " />
-                  </div>
+
+                  <h4 style="">
+
+                  <span>Yours Movies</span>
+                  </h4>
+
+
+
 
 
 AFTER;

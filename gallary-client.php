@@ -1,22 +1,4 @@
-<?php
-session_start();
-for($i=0; $i<=100; $i++){
- $j="request".$i;
- $k="plid".$i;
- if(isset($_POST[$j])){
-   $plid = $_SESSION[$k];
-   break;
- }
-}
 
- $pdo = new PDO( "mysql:dbname=youtube_db;host=localhost;charset=utf8mb4","root", "");//SQLとDB接続内容
-   if(!$pdo){echo "接続失敗";}//接続確認
-
-   $list = $pdo -> prepare("SELECT * FROM user WHERE PLID LIKE '{$plid}'");
-   $list -> execute();
-
-
-  ?>
 </body>
 </html>
 
@@ -121,7 +103,10 @@ $(function() {
           <li><a href="#top"  onclick="nav_close()">home</a></li>
           <li><a href="#section-target"  onclick="nav_close()">profile</a></li>
           <li><a href="#workSection"  onclick="nav_close()">gallery</a></li>
+          <li><a href=""  onclick="nav_close()">list</a></li>
           <li><a href=""  onclick="nav_close()">push</a></li>
+
+
         </ul>
 
       </div>
@@ -129,14 +114,16 @@ $(function() {
         <div class="nav_cont">
 
             <div class="home_btn">
-              <a href="index.html"><img src="src/img/MW_Logo.png" alt="" class="movieworks_logo"></a>
+              <a href="http://localhost/movieworks-beta/MW_TopPage/MW_TopPage/index.php"><img src="src/img/MW_Logo.png" alt="" class="movieworks_logo"></a>
             </div>
 
           <ul>
-            <li><a href="#"><img src="src/img/home.png" alt="" class="header_icon"><p>home</p></a></li>
-            <li><a href="#"><img src="src/img/prof.png" alt="" class="header_icon"><p>profile</p></a></li>
-            <li><a href="#"><img src="src/img/serch.png" alt="" class="header_icon"><p>gallery</p></a></li>
-            <li><a href="#"><img src="src/img/note.png" alt="" class="header_icon"><p>push</p></a></li>
+            <li><a href=""><img src="src/img/home.png" alt="" class="header_icon"><p>home</p></a></li>
+            <li><a href="http://localhost/movieworks-beta/profile.php?mode=success&code=4/AAAJutV5MmO-buUKa-tLYzMI2E35K8cPCFDF2hO6D2PaHgP0fZXTXpEbkUdZvHCFua4KsOmKxEWPk-5l0mYDJd0#"><img src="src/img/prof.png" alt="" class="header_icon"><p>profile</p></a></li>
+            <li><a href="http://localhost/movieworks-beta/gallaryform.php"><img src="src/img/serch.png" alt="" class="header_icon"><p>gallery</p></a></li>
+            <li><a href="http://localhost/movieworks-beta/list.php"><img src="src/img/human.png" alt="" class="header_icon"><p>list</p></a></li>
+            <li><a href="http://localhost/movieworks-beta/touko.php"><img src="src/img/note.png" alt="" class="header_icon"><p>push</p></a></li>
+
           </ul>
           <a id="menu_btn" href="javascript:void(0)" onclick="nav_open()" class="nav_menu_btn">&Congruent;
           </a>
@@ -145,45 +132,18 @@ $(function() {
     </header>
     <body>
 
-      <?php
-      if(!$list){
-        echo "ERROR";
-      }else{
-        $num = $list -> rowCount();
-      }
-        if($num == 0){
-          echo "ユーザーが存在しません";
-          exit;
-      }else{
-        while($data=$list->fetch()){
-          $re_name = $data["name"];
-          $_SESSION['cl_name'] = $re_name;
-          // echo "<br>";
-          $re_pic = $data["picture"];
-          $_SESSION['cl_pic'] = $re_pic;
-          // echo "<br>";
-          $re_email = $data["email"];
-          $_SESSION['cl_email'] = $re_email;
-          // echo "<br>";
-        }//while終了
-      }
-       ?>
 
       <div class="wrapper">
         <section class="mainContent">
           <div class="prof-all">
           <div class="prof-body">
-            <!-- <h3 class="prof-title">動画のタイトル</h3> -->
+            <h3 class="prof-title">動画のタイトル</h3>
 
-            <!-- <div class="prof-movie">
+             <div class="prof-movie">
               <iframe width="250" height="250" src="//www.youtube.com/embed/d6SSnbVCmEg" frameborder="0" allowfullscreen></iframe>
-            </div> -->
-
-            <div class="prof-icon">
-              <img src="<?php echo $re_pic; ?>" alt="">
-              <h3 class="prof-title"><?php echo $re_name; ?></h3>
-
             </div>
+
+
 
             <form method='post' action='gallary-client-sinsei.php'><input type='submit' name='request{' value='この人にマッチング申請を送る'></form>
             <form method='post' action='gallaryForm.php'><input type='submit' name='request' value='ギャラリーに戻る'></form>

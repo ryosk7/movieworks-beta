@@ -1,9 +1,9 @@
 <?php
- session_start();
- $plid = $_SESSION['plid'];
-
- $pdo = new PDO( "mysql:dbname=youtube_db;host=localhost;charset=utf8mb4","root", "");//SQLとDB接続内容
- if(!$pdo){echo "接続失敗";}//接続確認
+ // session_start();
+ // $plid = $_SESSION['plid'];
+ //
+ // $pdo = new PDO( "mysql:dbname=youtube_db;host=localhost;charset=utf8mb4","root", "");//SQLとDB接続内容
+ // if(!$pdo){echo "接続失敗";}//接続確認
 
  ?>
 
@@ -108,25 +108,30 @@
       <div class="Header__head">
         <div class="nav_sp" style="display: none;">
           <ul class="Menu">
-            <li><a href="#top"  onclick="nav_close()">TOP</a></li>
-            <li><a href="#section-target"  onclick="nav_close()">ABOUT</a></li>
-            <li><a href="#workSection"  onclick="nav_close()">WORK</a></li>
-            <li><a href="https://www.wantedly.com/users/24156855"  onclick="nav_close()">CONTACT</a></li>
+            <li><a href="#top"  onclick="nav_close()">home</a></li>
+            <li><a href="#section-target"  onclick="nav_close()">profile</a></li>
+            <li><a href="#workSection"  onclick="nav_close()">gallery</a></li>
+            <li><a href=""  onclick="nav_close()">list</a></li>
+            <li><a href=""  onclick="nav_close()">push</a></li>
+
+
           </ul>
 
         </div>
         <div id="nav">
           <div class="nav_cont">
-            <a href="index.html">
-              <div class="home_btn">
 
+              <div class="home_btn">
+                <a href="http://localhost/movieworks-beta/MW_TopPage/MW_TopPage/index.php"><img src="src/img/MW_Logo.png" alt="" class="movieworks_logo"></a>
               </div>
-            </a>
+
             <ul>
-              <li><a href="#top">TOP</a></li>
-              <li><a href="#section-target">ABOUT</a></li>
-              <li><a href="#workSection">WORK</a></li>
-              <li><a href="https://www.wantedly.com/users/24156855">CONTACT</a></li>
+              <li><a href=""><img src="src/img/home.png" alt="" class="header_icon"><p>home</p></a></li>
+              <li><a href="http://localhost/movieworks-beta/profile.php?mode=success&code=4/AAAJutV5MmO-buUKa-tLYzMI2E35K8cPCFDF2hO6D2PaHgP0fZXTXpEbkUdZvHCFua4KsOmKxEWPk-5l0mYDJd0#"><img src="src/img/prof.png" alt="" class="header_icon"><p>profile</p></a></li>
+              <li><a href="http://localhost/movieworks-beta/gallaryform.php"><img src="src/img/serch.png" alt="" class="header_icon"><p>gallery</p></a></li>
+              <li><a href="http://localhost/movieworks-beta/list.php"><img src="src/img/human.png" alt="" class="header_icon"><p>list</p></a></li>
+              <li><a href="http://localhost/movieworks-beta/touko.php"><img src="src/img/note.png" alt="" class="header_icon"><p>push</p></a></li>
+
             </ul>
             <a id="menu_btn" href="javascript:void(0)" onclick="nav_open()" class="nav_menu_btn">&Congruent;
             </a>
@@ -139,20 +144,20 @@
         <section>
         <div class="col-xs-2 col-md-12 header__col global-nav-wrapper clearfix">
           <div class="genruFlex">
-          <!-- <dl>
+          <dl>
             <dt><a href="">ALL</a></dt>
             <dt><a href="">Youtube</a></dt>
             <dt><a href="">PV</a></dt>
             <dt><a href="">企業向け</a></dt>
             <dt><a href="">Other</a></dt>
-          </dl> -->
+          </dl>
 
-          <form method="post">
+          <!-- <form class="formstyle" method="post">
            <input type="submit" name="1" value="PV">
            <input type="submit" name="2" value="YOUTUBER">
            <input type="submit" name="3" value="GAME">
            <input type="submit" name="0" value="ALL">
-          </form>
+          </form> -->
 
           <div id="responsive-btn"></div>
           <!-- end .header__col -->
@@ -161,23 +166,25 @@
         </section>
 
         <main>
-          <!-- <section>
-            <h2>The Title</h2>
+          <section>
+            <a href="http://localhost/movieworks-beta/gallery-criant.php" class="info-link">
+            <h2>Youtube制作承ります</h2>
             <img class="section-img profile" src="https://picsum.photos/g/600/400?image=625" alt="important graph">
             <p>Some Text goes here, some text goes here, some text goes here, some text goes here.</p>
-            <a href="#" class="info-link">Learn more...</a>
+            </a>
           </section>
           <section>
-            <h2>The Title</h2>
+            <a href="http://localhost/movieworks-beta/gallery-criant.php" class="info-link">
+            <h2>PV等の映像編集行います！</h2>
             <p>Some Text goes here, some text goes here, some text goes here, some text goes here.</p>
             <img class="section-img" src="https://emojipedia-us.s3.amazonaws.com/thumbs/120/emoji-one/104/chart-with-upwards-trend_1f4c8.png" alt="important graph">
-            <a href="#" class="info-link">Learn more...</a>
+            </a>
           </section>
           <section>
             <h2>The Title</h2>
-            <img class="section-img profile" src="https://picsum.photos/g/600/400?image=625" />
+            <img class="section-img profile" src="http://localhost/movieworks-beta/src/img/icon.png" />
             <p>Some Text goes here, some text goes here, some text goes here, some text goes here.</p>
-            <a href="#" class="info-link">Learn more...</a>
+            <a href="http://localhost/movieworks-beta/gallery-criant.php" class="info-link">Learn more...</a>
           </section>
           <section class="bigbottom">
             <h2>The Title</h2>
@@ -194,64 +201,6 @@
             <p>Some Text goes here, some text goes here, some text goes here, some text goes here.</p>
             <a href="#" class="info-link">Learn more...</a>
           </section>
- -->
-
-          <?php
-          $count=0;
-           if(isset($_POST["1"]) || isset($_POST["2"]) || isset($_POST["3"])){
-           for($i=1; $i<=3; $i++){
-             if(isset($_POST[$i])){
-
-                 $list = $pdo -> prepare("SELECT * FROM movie WHERE tag LIKE '{$i}'");
-                 $list -> execute();
-
-                 if(!$list){
-                   echo "ERROR";
-                 }else{
-                   $num = $list -> rowCount();
-                 }
-                 if($num == 0){
-                   echo "動画がありません";
-                   exit;
-                 }
-                   else{
-                     while($data=$list->fetch()){
-                       $src="src='https://www.youtube.com/embed/{$data["mvid"]}'";
-                     echo '
-                     <section>
-                     <iframe width="320" height="180"'
-                         .$src.'frameborder="0" allow="autoplay; encrypted-media"
-                         allowfullscreen></iframe>';
-                     echo "<br><form method='post' action='gallary-client.php'><input type='submit' name='request{$count}' value='君に決めた'></form></section>";
-                     $sname="plid".$count;
-                     $_SESSION[$sname]=$data["mvid"];
-                     $count++;
-
-                     }//while終了
-                   }
-                 }//if文終了
-               }//for文終了
-             }else{
-
-
-             $list = $pdo->prepare("SELECT * from movie");
-             $list -> execute();
-
-             if(!$list){echo "ERROR";}
-             else{
-               while($data=$list->fetch()){
-                 $src="src='https://www.youtube.com/embed/{$data["mvid"]}'";
-                 echo '
-                 <section>
-                     <iframe width="320" height="180"'
-                         .$src.'frameborder="0" allow="autoplay; encrypted-media"
-                         allowfullscreen></iframe>';
-                     echo "<br><form method='post' action='gallary-client.php'><input type='submit' name='request{$count}' value='君に決めた'></form></section>";
-                     $_SESSION["plid{$count}"] = $data["plid"];
-               }//while終了
-             }//else終了
-           }
-            ?>
 
 
 

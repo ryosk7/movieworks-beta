@@ -214,7 +214,7 @@ a {
 p {
   font-size: 14px;
   color: #575757;
-  text-align: justify;
+  /* text-align: justify; */
   font-feature-settings: 'palt';
 }
 
@@ -271,7 +271,6 @@ p {
   color: #e4002b;
   font-size: 13px;
 }
-
 [class^=icon-]:before, [class*=" icon-"]:before {
   font-family: fontello;
   display: inline-block;
@@ -289,7 +288,4 @@ p {
 .icon-facebook:before {
     content: '\e801';
 >>>>>>> edit-profile-page
-}
-.right a:hover {
-  opacity: .5;
 }

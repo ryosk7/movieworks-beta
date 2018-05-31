@@ -1,6 +1,26 @@
+.box2 {
+  width: 660px;
+height: 200px;
+    padding: 0.5em 1em;
+    margin: auto;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+        margin-bottom: 25px;
+}
+.box2 p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
 
 .prof-all{
-  height: 2408px;
 
 }
 .prof-body{
@@ -12,7 +32,7 @@
   border-radius: 7px;
   box-shadow: 0 0 7px rgba( 0, 0, 0, 0.2 );
 
-  height: 1800px;
+  height: 864px;
   text-align: center;
 }
 .prof-icon img{
@@ -48,17 +68,17 @@
   transition: .4s;
 }
 #movie_button:hover {
-  background: #fff;
-  color: #000;
+    background: #fff;
+    color: #000;
 }
 .prof-movie {
   position: relative;
   width:100%;
-  margin-left: 30px;
-  height:1000px;
+  margin-left: 5px;
 }
 .prof-movie iframe{
   margin:10px 10px 0 10px;
+  width: 398px;
 }
 
 .prof_prof {
@@ -67,7 +87,6 @@
   margin-top:100px;
   background-color: #eee;
   text-align: center;
-  clear: both;
 }
 .prof-title {
   line-height: normal;
@@ -89,41 +108,17 @@
   height:100px;
 }
 #form_submit_button {
-  width:120px;
-  height:40px;
-  margin-right: 20px;
-  padding: 0.3em 1em;
-  text-decoration: none;
-  background-color: #000;
-  color: #fff;
-  border: solid 2px #000;
-  border-radius: 3px;
-  transition: .4s;
+    width:246px;
+    height:40px;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    border: solid 2px #000;
+    border-radius: 3px;
+    transition: .4s;
 }
 #form_submit_button:hover {
-  background: #fff;
-  color: #000;
+    background: #fff;
+    color: #000;
 }
-
-h4 {
-  font-size: 47px;
-  margin-left: 15px;
-  position: relative;
-  text-align: center;
-  color: #00BCD4;
-}
-
-/* h4:before {
-border-top: 1px solid;
-content: "";
-position: absolute;
-top: 50%;
-left: 0;
-width: 100%;
-} */
-/*
-h4 span {
-background-color: white;
-display: inline-block;
-padding: 0 0.5em;
-} */

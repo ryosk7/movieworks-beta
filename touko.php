@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="src/css/match.css">
+  <link rel="stylesheet" href="src/css/touko.css">
   <link rel="stylesheet" href="src/css/style.css">
   <link rel="stylesheet" href="src/css/reset.css">
   <link rel="stylesheet" href="src/css/modal.css">
@@ -132,28 +132,26 @@
       <body>
 
 
+        <div class="contact_container">
 
-
-        <section class="mainContent">
-          <div class="container">
-            <div class="matching">
-              <h3>matching!</h3>
-              <p>○○さんへの申請が承認されました</p>
-            </div>
-            <div class="profile">
-              <div class="profile_img">
-                <img src="src/img/icon.png" alt="">
-              </div>
-              <div class="profile_text">
-                <ul>
-                  <li>　<span>name</span>----></li>
-                  <li>　<span>email</span>----></li>
-                  <li>　<span>profile</span>----></li>
-                </ul>
-              </div>
-            </div>
+          <div class="contact_title">
+            <h1>Post Projects</h1>
+            <p>案件を投稿しましょう</p>
           </div>
-        </section>
+
+          <div class="contact_form">
+            <form class="" method="post">
+              <input type="text" name="" value="" class="form_method toukou_title"placeholder="title">
+              <textarea name="" rows="15" cols="70" class="form_method toukou_area" placeholder="message"></textarea>
+              <input type="submit" name="" value="send" class="toukou_btn">
+            </form>
+          </div>
+        </div>
+
+
+
+
+
 
 
 
@@ -175,7 +173,7 @@
                           <a href="#" target="_blank">
                             <div class="sbtn_in">
                               <!-- <p class="icon-facebook"> -->
-                                <img src="src/img/icon_face.png" alt="" class="footer_i">
+                                <img src="src/img/icon_face.png" alt="">
                                <!-- </p> -->
                               <div class="slide reset"><span class="icon-facebook"></span></div>
                             </div>
@@ -185,7 +183,7 @@
                           <a href="#" target="_blank">
                             <div class="sbtn_in">
                               <!-- <p class="icon-twitter"></p> -->
-                              <img src="src/img/icon_twitter.png" alt="" class="footer_i">
+                              <img src="src/img/icon_twitter.png" alt="">
                               <div class="slide reset"><span class="icon-twitter"></span></div>
                             </div>
                           </a>
@@ -194,7 +192,7 @@
                           <a href="#" target="_blank">
                             <div class="sbtn_in">
                               <!-- <p class="icon-instagram"></p> -->
-                              <img src="src/img/icon_insta.png" alt="" class="footer_i">
+                              <img src="src/img/icon_insta.png" alt="">
                               <div class="slide reset"><span class="icon-instagram"></span></div>
                             </div>
                           </a>
